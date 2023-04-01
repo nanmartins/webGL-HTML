@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 *
 {
     margin: 0;
@@ -27,15 +30,22 @@ body
 {
     display: flex;
     align-items: center;
+    width: 80vw;
     height: 100vh;
+    margin: auto;
     position: relative;
     font-family: 'Cabin', sans-serif;
-    color: #ffeded;
+    color: #c3c3c3;
     text-transform: uppercase;
-    font-size: 7vmin;
-    padding-left: 10%;
-    padding-right: 10%;
+    font-size: 15vmin;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    font-family: 'Bebas Neue', cursive;
 }
+
+/* h2, h1 {
+  text-shadow: white 2px 5px;
+} */
 
 section:nth-child(odd)
 {
