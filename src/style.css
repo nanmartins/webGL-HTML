@@ -8,7 +8,8 @@
 }
 
 html {
-  background-color: #1e1a20;
+  /* background-color: #1e1a20; */
+  background-image: linear-gradient(rgb(5,25,64) -2.1%,rgb(111,45,189),rgb(15,0,42));
 }
 
 /* html,
@@ -35,19 +36,22 @@ body
     margin: auto;
     position: relative;
     font-family: 'Cabin', sans-serif;
-    color: #c3c3c3;
+    color: rgb(123, 123, 123);
     text-transform: uppercase;
-    font-size: 15vmin;
+    font-size: 10vmin;
     /* padding-left: 10%;
     padding-right: 10%; */
     font-family: 'Bebas Neue', cursive;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2px 2px black;
 }
 
 /* h2, h1 {
   text-shadow: white 2px 5px;
 } */
 
-section:nth-child(odd)
+/* section:nth-child(odd)
 {
     justify-content: flex-end;
-}
+} */

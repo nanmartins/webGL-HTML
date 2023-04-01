@@ -7,9 +7,9 @@ import gsap from "gsap"
  */
 // const gui = new dat.GUI()
 
-const parameters = {
-    materialColor: '#ffeded'
-}
+// const parameters = {
+//     materialColor: '#ffeded'
+// }
 
 // gui
 //     .addColor(parameters, 'materialColor')
@@ -44,25 +44,22 @@ const particleTexture = textureLoader.load('textures/particles/9.png')
  */
 const objectsDistance = 4
 
-const material = new THREE.MeshToonMaterial({
-  color: parameters.materialColor,
-  gradientMap: gradientTexture
- })
+
 
 // Mesh 1
- const mesh1Material = new THREE.MeshToonMaterial({
+ const mesh1Material = new THREE.MeshNormalMaterial({
    color: '#ABFF4F',
    gradientMap: gradientTexture
  })
 
 const mesh1 = new THREE.Mesh(
-  new THREE.TorusGeometry(1, 0.4, 16, 60),
+  new THREE.IcosahedronGeometry(1.5, 0),
   mesh1Material
 )
 
 
 // Mesh 2
-const mesh2Material = new THREE.MeshToonMaterial({
+const mesh2Material = new THREE.MeshNormalMaterial({
   color: '#F06C9B',
   gradientMap: gradientTexture
 })
@@ -73,13 +70,13 @@ const mesh2 = new THREE.Mesh(
 )
 
 // Mesh 3
-const mesh3Material = new THREE.MeshToonMaterial({
+const mesh3Material = new THREE.MeshNormalMaterial({
   color: '#87BCDE',
   gradientMap: gradientTexture
 })
 
 const mesh3 = new THREE.Mesh(
-  new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
+  new THREE.TorusGeometry(1, 0.4, 16, 60),
   mesh3Material
 )
 
@@ -110,28 +107,28 @@ const sectionMeshes = [ mesh1, mesh2, mesh3 ]
  */
 const particlesCount = 1000
 const positions = new Float32Array(particlesCount * 3)
-const colors = new Float32Array(particlesCount * 3)
+// const colors = new Float32Array(particlesCount * 3)
 
 for (let i = 0; i < particlesCount; i++) {
   positions[i * 3 + 0] = (Math.random() - 0.5) * 10
   positions[i * 3 + 1] = objectsDistance * 0.5 - Math.random() * objectsDistance * sectionMeshes.length
   positions[i * 3 + 2] = (Math.random() - 0.5) * 10
 
-  colors[i] = Math.random()
+  // colors[i] = Math.random()
 }
 
 const particlesGeometry = new THREE.BufferGeometry()
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+// particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 
 const particlesMaterial = new THREE.PointsMaterial({
   alphaMap: particleTexture,
   transparent: true,
   depthWrite: false,
   blending: THREE.AdditiveBlending,
-  vertexColors: true,
+  // vertexColors: true,
   sizeAttenuation: true,
-  size: 0.1
+  size: 0.06
 })
 
 const particles = new THREE.Points(particlesGeometry, particlesMaterial)
