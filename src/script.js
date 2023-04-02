@@ -232,6 +232,10 @@ const tick = () =>
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
 
+    // Animate particles
+    // particles.rotation.z = elapsedTime * 0.01
+    // particles.rotation.y = elapsedTime * 0.01
+
 
     // Animate camera
     camera.position.y = - scrollY / sizes.height * objectsDistance
