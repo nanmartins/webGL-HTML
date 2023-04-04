@@ -9,7 +9,7 @@
 
 html {
   /* background-color: #1e1a20; */
-  background-image: linear-gradient(rgb(5,25,64),rgb(218, 182, 252) 50%,rgb(15,0,42));
+  background-image: linear-gradient(rgb(5,25,64),rgba(164, 67, 120, 0.916) 50%,rgb(15,0,42));
 }
 
 /* html,
