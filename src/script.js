@@ -46,9 +46,9 @@ const objectsDistance = 4
 
 
 
-// Mesh 1
- const mesh1Material = new THREE.MeshNormalMaterial({
-   color: '#ABFF4F',
+// ////////// Mesh 1
+ const mesh1Material = new THREE.MeshStandardMaterial({
+   color: '#9BE564',
    gradientMap: gradientTexture
  })
 
@@ -58,9 +58,9 @@ const mesh1 = new THREE.Mesh(
 )
 
 
-// Mesh 2
-const mesh2Material = new THREE.MeshNormalMaterial({
-  color: '#F06C9B',
+// ////////// Mesh 2
+const mesh2Material = new THREE.MeshStandardMaterial({
+  color: '#5ADBFF',
   gradientMap: gradientTexture
 })
 
@@ -69,9 +69,9 @@ const mesh2 = new THREE.Mesh(
   mesh2Material
 )
 
-// Mesh 3
-const mesh3Material = new THREE.MeshNormalMaterial({
-  color: '#87BCDE',
+// ////////// Mesh 3
+const mesh3Material = new THREE.MeshStandardMaterial({
+  color: '#FE9000',
   gradientMap: gradientTexture
 })
 
@@ -92,10 +92,10 @@ scene.add(mesh1, mesh2, mesh3)
 
 
 /**
- * Lights
+ *  ////////////////////////////Lights/////////////////////////////////////////////
  */
 const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
-directionalLight.position.set(1, 1, 0)
+directionalLight.position.set(1, 0, 1)
 
 scene.add(directionalLight)
 
@@ -103,7 +103,7 @@ const sectionMeshes = [ mesh1, mesh2, mesh3 ]
 
 
 /**
- * Particles
+ * //////////////////////////////Particles////////////////////////////////////////
  */
 const particlesCount = 1000
 const positions = new Float32Array(particlesCount * 3)
